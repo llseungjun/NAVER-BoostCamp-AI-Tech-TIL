@@ -636,3 +636,322 @@ ex(dic) # 1 2 3
 - AI에서 전반적으로 수학적인 개념이 어떻게 쓰이는지 정도만 알고 넘어갔다. 경사하강법과 베이즈 통계학까지는 자세한 수식을 이해완료 했지만, CNN과 RNN은 개인적으로 추가학습이 필요함을 느꼈다.
 - LSTM과 GRU에 대한 선행학습으로 CNN과 RNN에 대한 추가학습이 필요할 것 같다.
 </details>
+
+
+
+
+
+<details>
+
+<summary>Day6 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂  chapter 1 수강완료
+
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃  기본 과제 1
+    🙃  자세히 짚고 넘어갈 학습 내용 정리
+
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+### view vs reshape
+    view
+    - tensor가 메모리에 연속적으로 존재할 때 사용 가능
+    - tensor의 메모리가 연속적으로 존재하지 않을 때는 copy하지 않고 실행이 불가능하다.
+    - copy하지 않기 때문에 빠르다.
+
+    reshape
+    - tensor가 메모리에 연속적으로 존재하지 않아도 사용 가능
+    - tensor의 메모리가 연속적으로 존재하지 않을 때는 tensor를 copy하여 차원을 변경하고 메모리에 저장한다.
+    - copy할 경우 느리다.
+
+
+### squeeze
+ - 설정값이 없을 때는 차원이 1인 차원을 없앤다.
+ - 제거할 차원을 설정해주면 해당차원을 제거한다. 
+
+ ```python
+ a = torch.rand(3,1,5)
+ a = a.squeeze() # [3,1,5] -> [3,5]
+
+ b = torch.rand(4,5,5,4)
+ b = b.squeeze(dim = 2) # [4,5,5,6] -> [4,5,4]
+ ```
+### unsqueeze
+ - squeeze와는 반대의 개녕으로 차원이 1인 차원을 만들어준다.
+ - 추가할 차원의 위치를 반드시 설정해주어야 한다.
+
+ ```python
+a = torch.rand(3,1,5)
+a = a.unsqueeze(dim = 1) # [3,1,5] -> [3,1,1,5]
+ ```
+### fill_
+- 주어진 tensor를 지정한 값으로 채우는 메소드
+
+```python
+a = torch.rand(2,3).fill_(3)
+a # [[3,3,3],[3,3,3]]
+```
+
+### mm vs matmul
+    mm
+    - 2D 행렬곱셈 연산에서 쓰인다.
+    - 벡터연산은 지원하지 않는다.
+    - broadcasting을 지원하지 않는다. -> debug 에서 유리함
+
+    matmul
+    - mm 보다 포괄적인 형태의 행렬 곱셈 연산에서 쓰인다.
+    - broadcasting을 지원한다. -> debug에서 불리함
+    
+### __get_item__
+ - 인스턴스를 리스트나 딕셔너리로 취급이 가능하게 만드는 함수
+ - 따라서 for loop이나 in과 같은 연산도 가능하다
+ - 해당 파일에서는 parse_config.py파일에 구현되어 있으며, 따라서 config 인스턴스에 딕셔너리와 같이 접근이 가능하다.
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪기본과제 1 마무리하기
+
+#  
+
+<span style="font-size:150%">🚩**DAY 6 소감**</span>  
+- 과제가 생각보다 오래걸려서 당황스러웠음
+- 학습정리를 매일 + 과제는 추가적인 사항으로 다뤄야겠다는 생각
+- 생각보다 기초가 많이 부족함을 느꼈다.
+
+</details>
+
+
+<details>
+
+<summary>Day7 Review</summary>
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂  chapter 2까지 완강
+
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 Day7 review
+    🙃 기본과제1 hook & apply
+
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+### nn.module
+ - 딥러닝을 구성하는 Layer의 base class
+
+### nn.parameter
+ - nn.module 내에서 attribute가 될때 require_grad = True로 지정
+ - nn.parameter의 텐서 내용을 Tensor로 선언해도 값은 같게 나옴
+ - Tensor로 선언했을 때와 차이는 module 인스턴스를 호출한뒤 parameters()로 iteration 했을 때 값이 보이지 않는것
+ - Tensor로 선언 시 값이 보이지 않는 이유는 AutoGrad의 대상이 아니기 때문
+
+### Backward
+- Foward(y_hat)와 실제 값 간의 차이에 대한 미분 수행
+
+#
+#
+### class Dataset 
+ - Dataset은 각 함수에 따라 데이터를 어떻게 가져올 것인가를 지정해주는 class
+ - 모든 데이터는 생성 시점에 처리하는 것이 아니라 학습에 필요한 시점에 transform이라는 함수를 통해 처리
+ - 최근에는 HuggingFace 등 표준화된 라이브러리 사용
+
+
+### class DataLoader
+ - Data의 Batch를 생성(여러개의 데이터를 한번에 묶어서 전달)
+ - GPU에 Feed하기 전 DataLoader를 통해 데이터를 변환하여 전달
+ - 파라미터인 collate_fn의 경우 variable length(가변 길이) 데이터의 가변 인자 부분에 대한 padding을 적용하고 싶을 경우 사용된다.
+
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪chapter 3 강의 완료
+    💪기본 과제 2 완료
+
+#  
+
+<span style="font-size:150%">🚩**DAY 7 소감**</span>
+ - oop에 대한 부분이 확실히 부족한 것 같아서 oop 기초에 대한 부분을 실제 코딩을 통해서 더 탐구해볼 필요가 있어보인다.
+ - 기본 과제 1을 진행하며 PyTorch 공식 문서들을 서칭해봤는데 익숙하지 않아서 애를 먹었다. 하지만 문서들을 읽어보면 쉽게 해결되는 문제가 몇 있었는데, 확실히 PyTorch 공식 문서를 잘 읽어보는 습관을 가져야겠다.
+
+</details>
+
+<details>
+
+<summary>Day8 Review</summary>
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂 기본 과제 1
+    🙂 chapter3 강의 수강 완료 
+
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 기본 과제 2
+
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+### Model Saving
+#### model.save()으로 model saving이 가능하다.
+- 학습 결과를 저장하기 위한 함수이다.
+- 2가지 방법으로 저장이 가능하다.
+    - 모델의 형태
+    - 파라미터
+- Early Stopping을 위해 학습 중간 과정의 결과를 저장한다.
+- orderded dict 형태로 저장된다.
+#### state_dict()
+ - 모델 파라미터를 표시해주는 함수
+ - 이 함수를 model.state_dict() 형식으로 모델에 적용한 후 torch.save()에 인자로 넣어주게 되면 파라미터 상태를 확인가능하다.
+ - 'pt'라는 확장자를 사용하여 파일을 저장한다.
+
+#### load_state_dict()
+- 저장된 파라미터를 불러오고 싶을 때 이용하는 함수
+
+### check point     
+- 학습의 중간 결과를 저장하여 최선의 결과를 선택
+- Early Stopping을 사용할 때 유용함
+- epoch, loss, metric을 함께 저장
+
+### pretrained model
+- 다른 데이터셋으로 만든 모델을 현재 데이터에 적용
+- pretrained model 활용 시 모델의 일부를 frozen 시킴
+    - frozen이란, 특정 Layer에 해당하는 기본 파라미터 값들을 유지한 채로 뒷부분만 파라미터를 업데이트 해주는 기법
+
+### Monitoring tools
+- WandB(Weight and Bias)
+- PyTorch TensorBoard
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪 chapter 4 완강하기
+
+#  
+
+<span style="font-size:150%">🚩**DAY 8 소감**</span>
+- 강의 내용 정리를 조금 더 세밀하게 해야할 필요성이 있음
+- 추후에 해당 부분 다시 강의를 들으며 부족한 부분을 보강할 필요가 있다.
+</details>
+
+<details>
+
+<summary>Day9 Review</summary>
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂 chapter4 강의 수강 완료 
+
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 기본 과제 2
+    🙃 Day 8, Day 9 내용정리
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+### Model Parallel
+- 모델을 병렬처리하여 나누는 것
+
+### Data Parallel
+- 데이터를 나눠서 GPU에 할당 후 결과의 평균을 구함
+- Minibatch와 유사하며 간단히 얘기하면 minibatch를 한번에 여러 GPU에서 수행한다고 할 수 있다.
+    - 문제점
+        - 하나의 GPU에 연산이 몰려서 처리되는 경우가 있다.
+        - 이러한 현상 때문에 Batch 사이즈가 감소하고 GIL(Grobal Interpreter Lock)의 문제로 이어진다.
+
+### Distributed Data Parallel
+- 각 CPU마다 process를 생성 후 개별 GPU에 할당
+- CPU를 각 GPU마다 할당해줘서 코디네이트 할 GPU가 필요없어짐 -> GPU 병목현상이 덜 발생
+
+### Hyperparameter Tuning
+- grid와 random 방법이 있으며 최근에는 베이지안 기법인 BOHB가 주로 쓰임
+- Ray와 같은 ML/DL의 병렬 처리를 위해 개발된 모듈이 있고 멀티노드 멀티프로세싱을 지원한다.
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪 Day 8, Day 9 내용정리
+#  
+
+<span style="font-size:150%">🚩**DAY 9 소감**</span>
+- 손으로 필기해서 다시 옮겨적는 방식 말고 강의를 들으면서 바로 타이핑을 쳐서 기록하자. 시간 단축.
+
+</details>
+
+<details>
+<summary>Day10 Review</summary>
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂 Day 8, Day 9 내용정리
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 심화 과제
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪 Week2 내용 보충 및 review
+#  
+
+<span style="font-size:150%">🚩**DAY 10 소감**</span>
+
+
+</details>
+
+<details>
+
+<summary>WEEK2 Review</summary>
+
+
+<span style="font-size:150%">**피어세션 정리**</span>    
+- 과제나 학습 내용에 관련해서 가볍게 이야기하고 정리하는 시간을 주로 가졌던 것 같다. 과제를 해결하기 위해 구글링을 하면서 이게 맞나? 싶은 상황을 팀원들과 공유했는데, 몰랐던 부분이 더욱 명확해진 것도 있었고 나만 모르는 것이 아니라는 자괴감도 덜 들게 되어서 동료들과 얘기하며 내가 가진 불안감들을 해소할 수 있는 시간이었다.
+- 지난 주에 계획했던 데이터 전처리 문제 풀기는 제대로 진행되지 않았지만, 정해진 커리큘럼을 잘 해결하도록 팀원들과 학습내용과 과제 진행상황에 대해 가볍게 공유하는 방식으로 운영이 되어도 괜찮겠다는 느낌을 받았다.
+
+<span style="font-size:150%">**학습회고**</span>  
+- nn.module을 학습하며 어려움을 겪었는데 내가 생각한 어려움을 겪은 이유는 OOP에 대한 개념이라고 생각한다. 또한 이 부분은 단기간에 받아드리기 어렵다고 개인적으로 생각해서 꾸준히 OOP에 남아 있는 빈칸들을 채워넣어가는 것이 필요하다는 생각이 들었다.
+</details>

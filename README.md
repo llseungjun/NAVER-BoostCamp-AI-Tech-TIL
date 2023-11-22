@@ -1015,10 +1015,10 @@ a # [[3,3,3],[3,3,3]]
 #  
 <span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
 
-
+- [Optimization](./DL/Optimization.md)
 - [CNN](./DL/CNN.md)  
 - [RNN](./DL/RNN.md)
-- [optimization](./DL/Optimization)
+
 
 ###
 

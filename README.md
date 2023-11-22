@@ -955,3 +955,123 @@ a # [[3,3,3],[3,3,3]]
 <span style="font-size:150%">**학습회고**</span>  
 - nn.module을 학습하며 어려움을 겪었는데 내가 생각한 어려움을 겪은 이유는 OOP에 대한 개념이라고 생각한다. 또한 이 부분은 단기간에 받아드리기 어렵다고 개인적으로 생각해서 꾸준히 OOP에 남아 있는 빈칸들을 채워넣어가는 것이 필요하다는 생각이 들었다.
 </details>
+
+
+<details>
+
+<summary>Day11 Review</summary>  
+  
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂 MLP 내용정리
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 optimization 내용정리
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+[Multi-Layer Perceptron](./DL/Multi_Layer_Perceptron)
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪 CNN, RNN 정리
+    💪 기본과제 1,2,3 완료
+#  
+
+<span style="font-size:150%">🚩**DAY 11 소감**</span>
+
+
+</details>
+
+<details>
+<summary>Day12 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂 CNN, RNN 내용 정리
+    🙂 과제 4
+    🙂 optimization 내용정리
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 과제 5
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+
+- [CNN](./DL/CNN.md)  
+- [RNN](./DL/RNN.md)
+- [optimization](./DL/Optimization)
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪 transformer 내용 정리
+#  
+
+<span style="font-size:150%">🚩**DAY 12 소감**</span>
+
+
+</details>
+
+<details>
+<summary>Day13 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂 transformer
+    🙂 generative model
+    🙂 과제 5
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 RNN 내용 정리 보강(LSTM, GRU)
+    🙃 transformer 내용 정리
+    🙃 generative model 내용 정리
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+
+
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪 심화과제 도전
+    💪 transformer 내용 정리
+    💪 RNN 내용 정리 보강(LSTM, GRU)
+    💪 generative model 내용 정리
+#  
+
+<span style="font-size:150%">🚩**DAY 12 소감**</span>
+
+
+</details>

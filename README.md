@@ -1071,7 +1071,75 @@ a # [[3,3,3],[3,3,3]]
     💪 generative model 내용 정리
 #  
 
-<span style="font-size:150%">🚩**DAY 12 소감**</span>
+<span style="font-size:150%">🚩**DAY 13 소감**</span>
+
+
+</details>
+
+<details>
+<summary>Day14 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+    🙂 transformer 내용 정리
+    🙂 심화과제
+    🙂 RNN 내용 정리 보강(LSTM, GRU)
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 generative model 내용 정리
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+- [Transformer](./DL/Transformer.md)
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+    💪 generative model 내용 정리(GAN,VAE,AAE,Auto regressive model)
+#  
+
+<span style="font-size:150%">🚩**DAY 14 소감**</span>
+
+
+</details>
+
+<details>
+<summary>Day15 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+
+
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+
+#  
+
+<span style="font-size:150%">🚩**DAY 15 소감**</span>
 
 
 </details>

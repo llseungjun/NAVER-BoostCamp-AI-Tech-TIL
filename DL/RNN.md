@@ -23,21 +23,84 @@
 - 이때 다음 시퀀스에서 활용하는 이전 데이터는 직전 시퀀스의 hidden state데이터만 참조한다
 
 ### RNN(vanila RNN)
+reference: (https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+![Alt text](image-36.png)
 - 단점 
     - short term dependency는 잘 잡지만 long term dependency는 잘 못잡음
     - vanishing / exploding gradient 문제
     
 ### LSTM
 - RNN의 문제점인 long term depend를 잘 잡기 위해 고안됨
-![Alt text](image-21.png)
-- 하나의 cell에 3개의 input이 들어가는 것을 확인할 수 있다.
-    - input data
-    - cell state
-    - hidden state
-    
 - 게이트가 너무 많아서 파라미터가 많은 문제점이 있다.
+![Alt text](image-21.png)
+(https://www.turing.com/kb/comprehensive-guide-to-lstm-rnn)  
+뉴럴 네트워크의 한 종류로, 순환 신경망(Recurrent Neural Networks, RNN)의 한 변종인 LSTM(Long Short-Term Memory)은 시계열 데이터나 자연어 처리와 같은 시간적/순차적인 데이터에서 장기 의존성(Long-Term Dependencies)을 학습하는 데 특히 유용한 모델입니다. LSTM은 RNN의 기본 아이디어를 확장하여 장기 의존성을 효과적으로 학습하고, 그래디언트 소실 또는 폭주 문제를 완화하여 긴 시퀀스에 대한 효과적인 학습을 가능하게 합니다.
+
+### LSTM의 핵심 구성 요소
+reference: (https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+1. **셀 상태(Cell State)**:  
+![Alt text](image-23.png)
+   - LSTM은 정보를 저장하는데 사용되는 중요한 구성 요소인 셀 상태를 보유하고 있습니다. 이 셀 상태는 정보를 추가하거나 제거하기 위해 게이트로 조절됩니다.
+
+2. **게이트(Gates)**:
+   - LSTM은 게이트 메커니즘을 사용하여 정보의 흐름을 제어합니다.
+   - **Forget Gate**: 이전 셀 상태로부터 어떤 정보를 버릴지 결정합니다.
+   ![Alt text](image-24.png)
+   - **Input Gate**: 현재 입력에서 어떤 정보를 저장할지 결정합니다.
+   ![Alt text](image-25.png)
+   - **Output Gate**: 셀 상태로부터 어떤 값을 출력할지 결정합니다.
+   ![Alt text](image-27.png)
+
+3. **셀 상태 업데이트 및 출력 계산**:
+   - 게이트의 결정에 따라 셀 상태가 업데이트되며, 이 셀 상태에서 출력값이 계산됩니다.
+    ![Alt text](image-28.png)
+### LSTM의 동작 방식
+
+1. **Forget Gate 동작**:
+   - 입력: 이전 은닉 상태($h_{t-1}$)와 현재 입력($x_t$)
+   - 이전 은닉 상태와 현재 입력을 받아서 어떤 정보를 버릴지 결정합니다.
+   - 시그모이드 함수를 통해 이전 정보 중에서 보존할 정보를 0에서 1 사이의 값으로 결정합니다.
+   - 1일 경우 셀 상태의 정보를 보존, 0일 경우 버리는 식으로 연산
+    ![Alt text](image-30.png)
+
+2. **Input Gate 및 업데이트 셀 상태**:
+   - 입력: 이전 셀 상태($h_{t-1}$)와 현재 입력($x_t$)
+   - 현재 입력과 이전 은닉 상태를 기반으로 어떤 새로운 정보를 저장할지 결정합니다.
+   - 두 개의 단계를 거쳐 정보를 업데이트합니다. 
+       - 먼저 시그모이드 게이트를 사용하여 어떤 값을 업데이트할 지 결정합니다.
+       - 다음으로 tanh 함수를 통해 새로운 후보 값(candidate values)을 생성합니다.
+       - 시그모이드 게이트의 출력과 tanh의 출력을 곱하고, 이를 이전 셀 상태에 더하여 새로운 셀 상태를 얻습니다.
+       ![Alt text](image-31.png) ![Alt text](image-32.png)
+
+3. **Output Gate 및 출력 계산**:
+   - 입력: 현재 입력($x_t$)과 새로운 셀 상태($C_t$)
+   - 출력을 생성하기 위해 현재 입력과 셀 상태를 기반으로 어떤 값을 출력할지 결정합니다.
+   - 현재 셀 상태를 tanh에 통과시켜 값을 조정하고, 이를 시그모이드 게이트의 출력과 곱하여 최종 출력값을 생성합니다.
+    ![Alt text](image-33.png)
+
+
+### LSTM의 장점
+
+1. **장기 의존성(Long-Term Dependencies) 처리**:
+   - RNN의 단점인 장기 의존성 문제를 완화하여 더 긴 시퀀스에서 정보를 보존하고 활용할 수 있습니다.
+
+2. **그래디언트 소실 문제 완화**:
+   - LSTM은 게이트 메커니즘을 통해 그래디언트 소실 문제를 줄이고 효과적으로 학습할 수 있도록 도와줍니다.
+
+3. **다양한 응용 분야**:
+   - 자연어 처리, 음성 인식, 주가 예측 등 다양한 분야에서 시계열 데이터의 효율적인 처리를 가능하게 합니다.
+
+LSTM은 시퀀스 데이터의 모델링과 예측을 위한 강력한 도구로, 그 유연성과 성능으로 많은 분야에서 널리 사용되고 있습니다.
+
+
+
+
+
+
 
 ### GRU
+![Alt text](image-34.png)
+- 셀 상태와 은닉 상태로 나누지 않고, 은닉 상태 하나로 합침
 - LSTM의 문제점인 게이트 개수가 많음을 보완
 - 파라미터를 줄이면서 generalize performence를 향상시킴
 

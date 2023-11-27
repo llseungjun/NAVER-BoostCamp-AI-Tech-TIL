@@ -1,5 +1,6 @@
 # NAVER-BoostCamp-AI-Tech-TIL
-
+<details>
+<summary><b>WEEK1</b></summary>
 <details>
 
 <summary>Day1 Review</summary>
@@ -637,9 +638,10 @@ ex(dic) # 1 2 3
 - LSTM과 GRU에 대한 선행학습으로 CNN과 RNN에 대한 추가학습이 필요할 것 같다.
 </details>
 
+</details>
 
-
-
+<details>
+<summary><b>WEEK2</b></summary>
 
 <details>
 
@@ -957,8 +959,15 @@ a # [[3,3,3],[3,3,3]]
 </details>
 
 
+</details>
+
+
+
 <details>
 
+<summary><b>WEEK3</b></summary>
+
+<details>  
 <summary>Day11 Review</summary>  
   
 <span style="font-size:150%">**완료한 사항**</span>  
@@ -1156,4 +1165,45 @@ a # [[3,3,3],[3,3,3]]
 <span style="font-size:150%">**학습회고**</span>  
 - 운이 좋게도 이번 주 강의와 관련된 내용의 책을 한 권 가지고 있어서 지난 주말에 미리 내용을 가볍게 훑어봤다. 확실히 강의를 들을 때 내용 이해가 빨라서 지난 주 보다 수월하게 학습할 수 있었다. 여기서 느낀 점은 같은 내용을 계속해서 다시 봤을 때 받아들이는 시야가 넓어진다는 것이다. 모르는 내용을 계속 붙잡기 보다 모르더라도 일단 넘어가고 다시 돌아와서 반복 학습했을 때 효율이 더 늘어나는 것을 알 수 있었다.
 - 학습 내용 정리를 할 때 chatgpt를 활용하면 효율이 늘어나는 것을 알 수 있었다. 타자가 느린편이기도 하고 배운 내용에 대해서 구조화가 잘 안됐을 때 chatgpt를 활용하면 스스로의 효율을 높일 수 있는 것 같다. 마스터 클래스에서 chatgpt라는 키워드는 꼭 한번씩 나오는 것 같고 이를 활용하는 능력이 중요시 되는 만큼 학습 능률을 키우기 위해서 chatgpt를 잘 활용하는 능력을 키워야 할 것 같다.  
+</details>
+
+</details>
+
+
+<details>
+<summary>Day16 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+    🙂 강의 4강까지 내용 정리
+    🙂 과제1 절반 완성
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+[RecSys Concept](./RecSys/RecSys_Concept.md)
+[Collaborative Filtering](./RecSys/Collaborative_Filtering.md)
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+    
+    💪 과제1 끝내기
+    💪 5 ~ 6강 듣고 내용 정리
+    💪 RecSys Concept 이미지 자료 첨부 및 복습
+    💪 Collaborative Filtering 이미지 자료 첨부 및 복습
+#  
+
+<span style="font-size:150%">🚩**DAY 16 소감**</span>
+- 내가 하고 있는 일 자체를 사랑하면 그 자체로 동기부여가 된다는 이야기를 들었는데 실제로 그런 것 같다. RecSys 트랙별 강의를 처음 듣게된 날이었는데 흥미로운 내용이었고 기존에 애매하게 알고 있던 부분을 매꿔주는 느낌이라 즐겁게 학습할 수 있었다.
+- 여전히 시간관리는 어렵다.. 나는 여유롭지 않다는 생각을 계속 가지고 있어야겠다.
+
 </details>

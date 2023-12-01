@@ -1169,6 +1169,8 @@ a # [[3,3,3],[3,3,3]]
 
 </details>
 
+<details>
+<summary><b>WEEK4</b></summary>
 
 <details>
 <summary>Day16 Review</summary>
@@ -1187,7 +1189,7 @@ a # [[3,3,3],[3,3,3]]
 #  
 <span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
 
-[RecSys Concept](./RecSys/RecSys_Concept.md)
+[RecSys Concept](./RecSys/RecSys_Concept.md)  
 [Collaborative Filtering](./RecSys/Collaborative_Filtering.md)
 
 ###
@@ -1205,5 +1207,151 @@ a # [[3,3,3],[3,3,3]]
 <span style="font-size:150%">🚩**DAY 16 소감**</span>
 - 내가 하고 있는 일 자체를 사랑하면 그 자체로 동기부여가 된다는 이야기를 들었는데 실제로 그런 것 같다. RecSys 트랙별 강의를 처음 듣게된 날이었는데 흥미로운 내용이었고 기존에 애매하게 알고 있던 부분을 매꿔주는 느낌이라 즐겁게 학습할 수 있었다.
 - 여전히 시간관리는 어렵다.. 나는 여유롭지 않다는 생각을 계속 가지고 있어야겠다.
+
+</details>
+
+<details>
+<summary>Day17 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+    🙂 과제1 끝내기
+    🙂 강의 5강 완료
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 강의 6강
+    🙃 Item2Vec ANN 이론 정리와 논문 읽어보기
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+[Item2Vec](./RecSys/Item2Vec.md)
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+    
+    💪 강의 6강 완료하기
+#  
+
+<span style="font-size:150%">🚩**DAY 17 소감**</span>  
+
+- 공부한 내용을 조금 더 구조화 할 필요가 있을 것 같다. 전체를 보고 세부화 시키는 과정이 필요한 것 같다.  
+
+</details>
+
+<details>
+<summary>Day18 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+    🙂 강의 6강
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+    🙃 과제 2
+    🙃 NCF, DNN, CDAE 논문 읽어보고 내용 정리
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+[DL_in_RecSys](./RecSys/DL_in_RecSys.md)
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+    
+    💪 과제 2 완료하기
+#  
+
+<span style="font-size:150%">🚩**DAY 18 소감**</span>
+
+
+</details>
+
+<details>
+<summary>Day19 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+    
+    💪 
+#  
+
+<span style="font-size:150%">🚩**DAY 19 소감**</span>
+
+
+</details>
+
+<details>
+<summary>Day20 Review</summary>
+
+<span style="font-size:150%">**완료한 사항**</span>  
+
+    🙂 
+        
+#      
+  
+  
+<span style="font-size:150%">**완료하지 못한 사항**</span>  
+
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+
+
+###
+
+
+#
+<span style="font-size:150%">**내일 목표**</span>  
+    
+    💪 
+#  
+
+<span style="font-size:150%">🚩**DAY 20 소감**</span>
+
+</details>
+
+<details>
+
+<summary>WEEK4 Review</summary>
+
+
+<span style="font-size:150%">**피어세션 정리**</span>    
+- 지난 주 내용을 복습하는 차원에서 한명씩 한 파트를 맡아서 설명하는 시간을 가졌다. 내용을 공부할 당시에는 다 이해하고 넘어갔던 내용들인데 설명을 하기에는 어려움이 있었다. 그레도 다행히 학습 정리를 해놓은 덕분에 많은 부분이 머릿속에 남아있어서 설명을 준비하는데 오랜시간이 걸리진 않았다. 다른 캠퍼들의 발표를 들으면서도 기존에 제대로 짚고 넘어가지 못한 부분에 대해서도 알게 되었고 다들 열심히 학습한 것이 보여서 더욱 동기부여가 됐던 시간이었다.
+
+<span style="font-size:150%">**학습회고**</span>  
+- 내용의 이해가 쉬웠던 반면에 구조화하기가 어려운 내용인 것 같다. 어떤 경우엔 어떤 모델을 쓰고 각 모델이 어떤 케이스에 쓰이는지 아직까지 정리가 제대로 안된 것 같다. 이론 하나하나에 치중하는 것도 필요하지만 전체적인 내용을 한번 그려보고 학습해야겠다. 
+</details>
 
 </details>

@@ -1355,3 +1355,77 @@ a # [[3,3,3],[3,3,3]]
 </details>
 
 </details>
+
+
+<details>
+<summary><b>WEEK5</b></summary>
+
+<details>
+<summary>Day21 Review</summary>
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+[GNN_in_RecSys](./RecSys/GNN_in_RecSys.md)
+
+
+</details>
+
+<details>
+<summary>Day22 Review</summary>
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+[Context-aware_Recommendation](./RecSys/Context-aware_Recommendation.md)
+
+
+</details>
+
+<details>
+<summary>Day23 Review</summary>
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+[DeepCTR](./RecSys/DeepCTR.md)
+
+
+</details>
+
+<details>
+<summary>Day24 Review</summary>
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+[Bandit_Recommendation](./RecSys/Bandit_Recommendation.md)
+
+
+</details>
+
+<details>
+<summary>Day25 Review</summary>
+
+#  
+<span style="font-size:150%">**자세히 짚고 넘어갈 학습 내용**</span>   
+
+
+
+</details>
+
+<details>
+<summary>WEEK5 Review</summary>
+
+
+<span style="font-size:150%">**피어세션 정리**</span>    
+
+
+<span style="font-size:150%">**학습회고**</span>  
+</details>
+
+</details>
+
+</details>
+
+
